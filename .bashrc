@@ -9,6 +9,10 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
+if [[ -z "$ZELLIJ" && -t 1 && "$PS1" && -z "$SSH_CONNECTION" ]]; then
+  exec zellij
+fi
+
 dotfiles_add() {
   local dotfiles_dir="$HOME/dotfiles"
   local base_dir="$HOME/.config"
@@ -54,6 +58,3 @@ dotfiles_add() {
 
   echo "Acordate de ir a ~/dotfiles y hacer commit para poder subir los cambios"
 }
-
-
-
