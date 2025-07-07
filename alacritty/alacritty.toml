@@ -4,6 +4,10 @@ size = 11
 [font.normal]
 family = "IosevkaTerm NF"
 
+[window.padding]
+x = 5
+y = 5
+
 # OldWorld
 
 [colors.primary]
@@ -36,4 +40,4 @@ white = "#C9C7CD"
 
 [colors.cursor]
 cursor = "#ACA1CF"
-text = "#C9C7CD"
+text = "#161617"

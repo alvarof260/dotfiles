@@ -13,6 +13,8 @@ if [[ -z "$ZELLIJ" && -t 1 && "$PS1" && -z "$SSH_CONNECTION" ]]; then
   exec zellij
 fi
 
+eval "$(starship init bash)"
+
 dotfiles_add() {
   local dotfiles_dir="$HOME/dotfiles"
   local base_dir="$HOME/.config"
