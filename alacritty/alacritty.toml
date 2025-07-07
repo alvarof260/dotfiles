@@ -3,3 +3,37 @@ size = 11
 
 [font.normal]
 family = "IosevkaTerm NF"
+
+# OldWorld
+
+[colors.primary]
+foreground = "#C9C7CD"
+background = "#161617"
+
+[colors.selection]
+text = "#161617" 
+background = "#C9C7CD"
+
+[colors.bright]
+black = "#161617"
+red = "#EA83A5"
+green = "#90B99F"
+yellow = "#E6B99D"
+blue = "#92A2D5"
+magenta = "#ACA1CF"
+cyan = "#85B5BA"
+white = "#C9C7CD"
+
+[colors.normal]
+black = "#161617"
+red = "#EA83A5"
+green = "#90B99F"
+yellow = "#E6B99D"
+blue = "#92A2D5"
+magenta = "#ACA1CF"
+cyan = "#85B5BA"
+white = "#C9C7CD"
+
+[colors.cursor]
+cursor = "#ACA1CF"
+text = "#C9C7CD"
