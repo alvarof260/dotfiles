@@ -31,7 +31,6 @@ from settings.keys import keys, mod
 from settings.groups import groups
 from settings.layouts import layouts, floating_layout
 
-
 widget_defaults = dict(
     font="sans",
     fontsize=12,
@@ -54,7 +53,8 @@ screens = [
                     name_transform=lambda name: name.upper(),
                 ),
                 widget.TextBox("default config", name="default"),
-                widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
+                widget.TextBox("Press &lt;M-r&gt; to spawn",
+                               foreground="#d75f5f"),
                 # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
                 # widget.StatusNotifier(),
                 widget.Systray(),

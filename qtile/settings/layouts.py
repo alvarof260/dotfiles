@@ -1,18 +1,20 @@
 from libqtile import layout
 from libqtile.config import Match
 
+layout_conf = {"border_focus": ["#ACA1CF", "#E29ECA"], "border_width": 1, "margin": 2}
+
 layouts = [
-    layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=4),
-    layout.Max(),
+    layout.Columns(**layout_conf),
+    layout.Max(**layout_conf),
+    layout.Bsp(**layout_conf),
+    layout.TreeTab(**layout_conf),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
-    # layout.Bsp(),
     # layout.Matrix(),
     # layout.MonadTall(),
     # layout.MonadWide(),
     # layout.RatioTile(),
     # layout.Tile(),
-    # layout.TreeTab(),
     # layout.VerticalTile(),
     # layout.Zoomy(),
 ]
@@ -27,5 +29,6 @@ floating_layout = layout.Floating(
         Match(wm_class="ssh-askpass"),  # ssh-askpass
         Match(title="branchdialog"),  # gitk
         Match(title="pinentry"),  # GPG key password entry
-    ]
+    ],
+    border_focus=["#90B99F"],
 )
