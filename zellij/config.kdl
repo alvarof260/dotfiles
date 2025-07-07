@@ -255,7 +255,24 @@ load_plugins {
 // Choose the theme that is specified in the themes section.
 // Default: default
 // 
-// theme "dracula"
+
+themes {
+  oldworld {
+    fg "#C9C7CD"
+    black "#161617"
+    bg "#85B5BA"
+    red "#EA83A5"
+    green "#92A2D5"
+    yellow "#E6B99D"
+    blue "#90B99F"
+    magenta "#ACA1CF"
+    cyan "#E29ECA"
+    white "#E5E9F0"
+    orange "#F5A191"
+  }
+}
+
+theme "oldworld"
  
 // Choose the base input mode of zellij.
 // Default: normal
@@ -274,7 +291,7 @@ default_mode "locked"
 // The name of the default layout to load on startup
 // Default: "default"
 // 
-// default_layout "compact"
+default_layout "work"
  
 // The folder in which Zellij will look for layouts
 // (Requires restart)
@@ -293,7 +310,7 @@ default_mode "locked"
 //   - true (default)
 //   - false
 // 
-// mouse_mode false
+mouse_mode false
  
 // Toggle having pane frames around the panes
 // Options:
