@@ -24,12 +24,18 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+import os
+
 from libqtile import bar, widget
 from libqtile.config import Click, Drag, Screen
 from libqtile.lazy import lazy
 from settings.keys import keys, mod
 from settings.groups import groups
 from settings.layouts import layouts, floating_layout
+
+c = "feh --bg-scale ~/Downloads/1372790.png &"
+
+os.system(c)
 
 widget_defaults = dict(
     font="sans",

@@ -17,7 +17,6 @@ keys = [
         lazy.layout.next(),
         desc="Move window focus to other window",
     ),
-
     # Move windows between left/right columns or move up/down in current stack.
     # Moving out of range in Columns layout will create new column.
     Key(
@@ -34,7 +33,6 @@ keys = [
     ),
     Key([mod, "shift"], "j", lazy.layout.shuffle_down(), desc="Move window down"),
     Key([mod, "shift"], "k", lazy.layout.shuffle_up(), desc="Move window up"),
-
     # Grow windows. If current window is on the edge of screen and direction
     # will be to screen edge - window would shrink.
     Key(
@@ -84,13 +82,13 @@ keys = [
     Key(
         [mod],
         "Print",
-        lazy.spawn("scrot ~/Pictures/%Y-%m-%d-%H%M%S.png"),
+        lazy.spawn("scrot /home/estanislao_dev/Pictures/%Y-%m-%d-%H%M%S.png"),
         desc="Take screenshot fullscreen",
     ),
     Key(
         [mod, "shift"],
         "Print",
-        lazy.spawn("scrot -s ~/Pictures/%Y-%m-%d-%H%M%S.png"),
+        lazy.spawn("scrot -s /home/estanislao_dev/Pictures/%Y-%m-%d-%H%M%S.png"),
         desc="Take screenshot custom",
     ),
     Key([mod], "v", lazy.spawn("alacritty -e nvim"), desc="Open nvim"),
