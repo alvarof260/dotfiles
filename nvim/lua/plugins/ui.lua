@@ -146,6 +146,7 @@ return {
       },
     },
   },
+
   {
     "folke/snacks.nvim",
     opts = {
@@ -177,6 +178,14 @@ return {
           { section = "startup" },
         },
       },
+    },
+  },
+
+  {
+    "folke/which-key.nvim",
+    lazy = "VeryLazy",
+    opts = {
+      preset = "modern",
     },
   },
 }
