@@ -126,4 +126,24 @@ return {
       return opts
     end,
   },
+  {
+    "folke/zen-mode.nvim",
+    opts = {
+      plugins = {
+        gitsigns = { enabled = true },
+        twilight = { enabled = true },
+        alacritty = {
+          enabled = true,
+          font = 14,
+        },
+      },
+    },
+    keys = {
+      {
+        "<leader>z",
+        "<cmd>ZenMode<CR>",
+        desc = "Zen Mode",
+      },
+    },
+  },
 }
