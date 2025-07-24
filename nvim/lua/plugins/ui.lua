@@ -150,6 +150,18 @@ return {
   {
     "folke/snacks.nvim",
     opts = {
+      picker = {
+        exclude = {
+          ".git",
+          "node_modules",
+        },
+        matcher = {
+          fuzzy = true,
+          smartcase = true,
+          ignorecase = true,
+          filename_bonus = true,
+        },
+      },
       dashboard = {
         -- your dashboard configuration comes here
         -- or leave it empty to use the default settings
