@@ -14,6 +14,7 @@ if [[ -z "$ZELLIJ" && -t 1 && "$PS1" && -z "$SSH_CONNECTION" ]]; then
 fi
 
 eval "$(starship init bash)"
+eval "$(zoxide init bash)"
 
 set -o vi
 
