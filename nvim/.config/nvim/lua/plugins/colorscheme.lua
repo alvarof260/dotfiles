@@ -14,6 +14,15 @@ return {
   -- },
 
   {
+    "stevedylandev/darkmatter-nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      vim.cmd("colorscheme darkmatter")
+    end,
+  },
+
+  {
     "miikanissi/modus-themes.nvim",
     name = "modus",
     priority = 1000,
@@ -43,7 +52,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "oldworld",
+      colorscheme = "darkmatter",
     },
   },
 }
