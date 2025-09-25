@@ -9,12 +9,13 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
-#if [[ -z "$ZELLIJ" && -t 1 && "$PS1" && -z "$SSH_CONNECTION" ]]; then
-#  exec zellij
-#fi
+if [[ -z "$ZELLIJ" && -t 1 && "$PS1" && -z "$SSH_CONNECTION" ]]; then
+  exec zellij
+fi
 
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 set -o vi
 

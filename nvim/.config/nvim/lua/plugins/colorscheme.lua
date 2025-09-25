@@ -14,15 +14,6 @@ return {
   -- },
 
   {
-    "stevedylandev/darkmatter-nvim",
-    lazy = false,
-    priority = 1000,
-    config = function()
-      vim.cmd("colorscheme darkmatter")
-    end,
-  },
-
-  {
     "miikanissi/modus-themes.nvim",
     name = "modus",
     priority = 1000,
@@ -40,19 +31,20 @@ return {
     priority = 1000,
     opts = {
       theme = "dragon",
-      overrides = function(colors)
-        return {
-          LineNr = { fg = colors.theme.ui.nontext, bg = "none" },
-        }
-      end,
     },
+  },
+
+  -- lua/plugins/rose-pine.lua
+  {
+    "rose-pine/neovim",
+    name = "rose-pine",
   },
 
   -- Configure LazyVim to load gruvbox
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "darkmatter",
+      colorscheme = "rose-pine",
     },
   },
 }

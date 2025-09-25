@@ -1,17 +1,16 @@
 from libqtile import layout
 from libqtile.config import Match
+from settings.themes import colors
 
-layout_conf = {"border_focus": ["#ACA1CF", "#E29ECA"], "border_width": 1, "margin": 2}
+layout_conf = {"border_focus": colors["focus"], "border_width": 1}
 
 layouts = [
-    layout.Columns(**layout_conf),
-    layout.Max(**layout_conf),
-    layout.Bsp(**layout_conf),
-    layout.TreeTab(**layout_conf),
+    layout.MonadTall(**layout_conf),
+    # layout.Bsp(**layout_conf),
+    # layout.TreeTab(**layout_conf),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
     # layout.Matrix(),
-    # layout.MonadTall(),
     # layout.MonadWide(),
     # layout.RatioTile(),
     # layout.Tile(),
@@ -30,5 +29,5 @@ floating_layout = layout.Floating(
         Match(title="branchdialog"),  # gitk
         Match(title="pinentry"),  # GPG key password entry
     ],
-    border_focus=["#90B99F"],
+    border_focus=colors["color4"],
 )

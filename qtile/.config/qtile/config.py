@@ -26,56 +26,19 @@
 
 import os
 
-from libqtile import bar, widget
-from libqtile.config import Click, Drag, Screen
+from libqtile.config import Click, Drag
 from libqtile.lazy import lazy
-from settings.keys import keys, mod
+
 from settings.groups import groups
 from settings.layouts import layouts, floating_layout
+from settings.screens import screens
+from settings.widgets import widget_defaults, extension_defaults
+from settings.keys import mod, keys, terminal
 
-c = "feh --bg-scale ~/Downloads/1372790.png &"
+c = "feh --bg-max ~/Downloads/asus-rog-metropolis-1920x1080-19776.jpg &"
 
 os.system(c)
 
-widget_defaults = dict(
-    font="sans",
-    fontsize=12,
-    padding=3,
-)
-extension_defaults = widget_defaults.copy()
-
-screens = [
-    Screen(
-        top=bar.Bar(
-            [
-                widget.CurrentLayout(),
-                widget.GroupBox(),
-                widget.Prompt(),
-                widget.WindowName(),
-                widget.Chord(
-                    chords_colors={
-                        "launch": ("#ff0000", "#ffffff"),
-                    },
-                    name_transform=lambda name: name.upper(),
-                ),
-                widget.TextBox("default config", name="default"),
-                widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
-                # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
-                # widget.StatusNotifier(),
-                widget.Systray(),
-                widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
-                widget.QuickExit(),
-            ],
-            24,
-            # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
-            # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
-        ),
-        # You can uncomment this variable if you see that on X11 floating resize/moving is laggy
-        # By default we handle these events delayed to already improve performance, however your system might still be struggling
-        # This variable is set to None (no cap) by default, but you can set it to 60 to indicate that you limit it to 60 events per second
-        # x11_drag_polling_rate = 60,
-    ),
-]
 
 # Drag floating layouts.
 mouse = [
