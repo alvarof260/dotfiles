@@ -1,4 +1,6 @@
-from libqtile import widget
+# CÓDIGO CORREGIDO:
+from qtile_extras import widget
+from qtile_extras.widget.decorations import RectDecoration
 from settings.themes import colors
 
 
@@ -10,74 +12,133 @@ def separator():
     return widget.Sep(**base(), linewidth=0, padding=5)
 
 
+def icon(fg="text", bg="dark", fontsize=16, text="?"):
+    return widget.TextBox(**base(bg, fg), fontsize=fontsize, text=text, padding=5)
+
+
 def workspaces():
     return [
         separator(),
         widget.GroupBox(
-            font="IosevkaTerm Nerd Font",
-            fontsize=18,
-            margin_y=3,
-            margin_x=10,
-            padding_y=4,
-            padding_x=6,
-            borderwidth=0,
+            font="IosevkaTerm Nerd Font Bold",
+            fontsize=14,
             active=colors["active"],
             inactive=colors["inactive"],
-            rounded=False,
             highlight_method="text",
             urgent_alert_method="text",
-            urgent_border=colors["urgent"],
-            this_current_screen_border=colors["focus"],
-            other_current_screen_border=colors["dark"],
             disable_drag=True,
+            this_current_screen_border=colors["focus"],
+            center_aligned=True,
+            decorations=[
+                RectDecoration(
+                    colour=colors["color3"],
+                    radius=5,  # radio para esquinas redondeadas
+                    filled=True,
+                    padding_x=2,
+                    padding_y=2,
+                )
+            ],
         ),
         separator(),
-        widget.WindowName(**base(fg="focus"), fontsize=12, padding=10),
+        widget.WindowName(
+            **base(fg="focus"),
+            fontsize=12,
+            padding=10,
+            max_chars=100,
+        ),
         separator(),
     ]
 
 
 primary_widgets = [
+    icon(fg="color3", text=" 󰣇 ", fontsize=34),
     *workspaces(),
     separator(),
-    widget.Pomodoro(
-        background=colors["color1"],
-        foreground=colors["text"],
-        color_brake=colors["urgent"],
-        color_active=colors["text"],
-        color_inactive=colors["inactive"],
-        length_pomodori=40,
-        length_long_break=20,
-        length_short_break=5,
-        padding=10,
-    ),
-    separator(),
     # widget.Redshift(),
-    widget.CheckUpdates(
-        distro="arch",
-        background=colors["color4"],
-        colour_have_updates=colors["text"],
-        colour_no_updates=colors["text"],
-        no_update_string="0",
-        display_format="{updates}",
-        update_interval=180,
-        custom_command="checkupdates",
-        padding=5,
+    widget.TextBox(
+        text=" 󰍛 ",
+        foreground=colors["grey"],
+        fontsize=34,
+        padding=-10,
+        decorations=[
+            RectDecoration(
+                colour=colors["color1"],
+                filled=True,
+                radius=[5, 0, 0, 5],
+                padding_y=2,
+            ),
+        ],
     ),
-    separator(),
     widget.CPU(
-        background=colors["color3"],
         foreground=colors["text"],
-        format="CPU {load_percent}%",
+        format="{load_percent}%",
+        padding=8,
+        decorations=[
+            RectDecoration(
+                colour=colors["inactive"],
+                filled=True,
+                radius=[0, 5, 5, 0],
+                padding_y=2,
+            ),
+        ],
     ),
     separator(),
+    widget.TextBox(
+        text="  ",
+        foreground=colors["grey"],
+        fontsize=34,
+        padding=-10,
+        decorations=[
+            RectDecoration(
+                colour=colors["color2"],
+                filled=True,
+                radius=[5, 0, 0, 5],
+                padding_y=2,
+            ),
+        ],
+    ),
     widget.Memory(
-        background=colors["color2"],
         foreground=colors["text"],
         measure_mem="G",
+        format="{MemUsed: .0f}{mm}",
+        padding=8,
+        decorations=[
+            RectDecoration(
+                colour=colors["inactive"],
+                filled=True,
+                radius=[0, 5, 5, 0],
+                padding_y=2,
+            ),
+        ],
     ),
     separator(),
-    widget.Clock(**base(bg="color1"), format="%d/%m/%Y - %H:%M "),
+    widget.TextBox(
+        text="  ",
+        foreground=colors["grey"],
+        fontsize=34,
+        padding=-10,
+        decorations=[
+            RectDecoration(
+                colour=colors["urgent"],
+                filled=True,
+                radius=[5, 0, 0, 5],
+                padding_y=2,
+            ),
+        ],
+    ),
+    widget.Clock(
+        format="%H:%M",
+        padding=8,
+        decorations=[
+            RectDecoration(
+                colour=colors["inactive"],
+                filled=True,
+                radius=[0, 5, 5, 0],
+                padding_y=2,
+            ),
+        ],
+    ),
+    separator(),
 ]
 
 widget_defaults = {

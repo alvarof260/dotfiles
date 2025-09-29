@@ -1,14 +1,14 @@
 {
-  "dark": ["#1c1a1c"],
-  "grey": ["#2e2d2f"],
-  "light": ["#f1ffff"],
-  "text": ["#181825"],
-  "focus": ["#665E7A"],
-  "active": ["#9e97d0"],
-  "inactive": ["#3f3b3e"],
-  "urgent": ["#c58ea7"],
-  "color1": ["#878fb9"],
-  "color2": ["#c5a3a9"],
-  "color3": ["#9e97d0"],
-  "color4": ["#f5c2e7"]
+  "dark": ["#191724"],
+  "grey": ["#26233a"],
+  "light": ["#908caa"],
+  "text": ["#e0def4"],
+  "focus": ["#eb6f92"],
+  "active": ["#21202e"],
+  "inactive": ["#6e6a86"],
+  "urgent": ["#c4a7e7"],
+  "color1": ["#9ccfd8"],
+  "color2": ["#f6c177"],
+  "color3": ["#ebbcba"],
+  "color4": ["#31748f"]
 }

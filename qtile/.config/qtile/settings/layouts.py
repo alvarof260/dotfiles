@@ -2,7 +2,7 @@ from libqtile import layout
 from libqtile.config import Match
 from settings.themes import colors
 
-layout_conf = {"border_focus": colors["focus"], "border_width": 1}
+layout_conf = {"border_focus": colors["focus"], "border_width": 1, "margin": 5}
 
 layouts = [
     layout.MonadTall(**layout_conf),

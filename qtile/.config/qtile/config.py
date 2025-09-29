@@ -35,7 +35,7 @@ from settings.screens import screens
 from settings.widgets import widget_defaults, extension_defaults
 from settings.keys import mod, keys, terminal
 
-c = "feh --bg-max ~/Downloads/asus-rog-metropolis-1920x1080-19776.jpg &"
+c = "feh --bg-fill ~/Downloads/a_branch_with_pink_flowers.jpg &"
 
 os.system(c)
 
