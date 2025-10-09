@@ -4,7 +4,7 @@ from settings.paths import qtile_path
 
 
 def load_theme():
-    theme = "sakura"
+    theme = "obsidian"
 
     config = path.join(qtile_path, "config.json")
     if path.isfile(config):

@@ -2,9 +2,10 @@ from libqtile import layout
 from libqtile.config import Match
 from settings.themes import colors
 
-layout_conf = {"border_focus": colors["focus"], "border_width": 1, "margin": 5}
+layout_conf = {"border_focus": colors["subtext"], "border_width": 1, "margin": 5}
 
 layouts = [
+    layout.Columns(**layout_conf),
     layout.MonadTall(**layout_conf),
     # layout.Bsp(**layout_conf),
     # layout.TreeTab(**layout_conf),
@@ -29,5 +30,5 @@ floating_layout = layout.Floating(
         Match(title="branchdialog"),  # gitk
         Match(title="pinentry"),  # GPG key password entry
     ],
-    border_focus=colors["color4"],
+    border_focus=colors["subtext"],
 )

@@ -2,7 +2,7 @@ from libqtile.config import Key, Group
 from libqtile.lazy import lazy
 from settings.keys import keys, mod
 
-group_icons = ["1", "2", "3", "4", "5", "6"]
+group_icons = ["  ", "  ", "  ", "  ", " 󰆧 "]
 groups = [Group(i) for i in group_icons]
 
 for i, group in enumerate(groups):

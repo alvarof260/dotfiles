@@ -1,0 +1,15 @@
+{
+  "background": ["#3d3b3785"],
+  "surface": ["#3d3b3785"],
+  "overlay": ["#50505085"],
+  "inactive": ["#7a7a7a"],
+  "border": ["#4f4f4f"],
+  "text": ["#d1d1d1"],
+  "subtext": ["#a1a1a1"],
+  "highlight": ["#5c92d1"],
+  "active": ["#d1d1d1"],
+  "secondary": ["#d1d1d1"],
+  "success": ["#5c92d1"],
+  "warning": ["#ffb74d"],
+  "error": ["#f55a5a"]
+}

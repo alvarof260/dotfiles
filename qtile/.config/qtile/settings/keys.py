@@ -3,7 +3,7 @@ from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
 mod = "mod4"
-terminal = guess_terminal()
+terminal = "ghostty"
 
 keys = [
     # Switch between windows in current stack pane
@@ -96,7 +96,7 @@ keys = [
         lazy.spawn("scrot -s /home/estanislao_dev/Pictures/%Y-%m-%d-%H%M%S.png"),
         desc="Take screenshot custom",
     ),
-    Key([mod], "v", lazy.spawn("alacritty -e nvim"), desc="Open nvim"),
+    Key([mod], "v", lazy.spawn("ghostty -e nvim"), desc="Open nvim"),
     Key([mod], "b", lazy.spawn("zen-browser"), desc="Open browser"),
     Key(
         [],

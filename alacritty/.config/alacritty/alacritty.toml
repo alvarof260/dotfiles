@@ -4,6 +4,10 @@ size = 11
 [font.normal]
 family = "IosevkaTerm NF"
 
+[window]
+opacity = 0.5
+blur = true
+
 [window.padding]
 x = 5
 y = 5

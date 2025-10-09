@@ -24,8 +24,9 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-import os
+import subprocess
 
+from libqtile import hook
 from libqtile.config import Click, Drag
 from libqtile.lazy import lazy
 
@@ -34,10 +35,14 @@ from settings.layouts import layouts, floating_layout
 from settings.screens import screens
 from settings.widgets import widget_defaults, extension_defaults
 from settings.keys import mod, keys, terminal
+from settings.paths import qtile_path
 
-c = "feh --bg-fill ~/Downloads/a_branch_with_pink_flowers.jpg &"
+from os import path
 
-os.system(c)
+
+@hook.subscribe.startup_once
+def autostart():
+    subprocess.call([path.join(qtile_path, "autostart.sh")])
 
 
 # Drag floating layouts.
