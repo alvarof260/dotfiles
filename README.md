@@ -1,6 +1,6 @@
 # Alvarof260's Dotfiles
 
-![Image of desktop](~/Pictures/2025-10-13-231437.png)
+![Image of desktop](./screenshots/2025-10-13-231437.png)
 
 This repository contains my personal configuration files (dotfiles) for various applications I use in my daily development workflow on Linux. The setup is centered around the Qtile window manager, Neovim, and a suite of terminal tools, all themed for a consistent and productive experience.
 
