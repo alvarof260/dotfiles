@@ -45,33 +45,49 @@ return {
   --  name = "everblush",
   -- },
 
+  -- {
+  --   "miikanissi/modus-themes.nvim",
+  --   name = "modus",
+  --   priority = 1000,
+  -- },
+  --
+  -- {
+  --   "dgox16/oldworld.nvim",
+  --   lazy = false,
+  --   priority = 1000,
+  -- },
+  --
+  -- {
+  --   "rebelot/kanagawa.nvim",
+  --   lazy = false,
+  --   priority = 1000,
+  --   opts = {
+  --     theme = "dragon",
+  --   },
+  -- },
+  --
+  -- -- lua/plugins/rose-pine.lua
+  -- {
+  --   "rose-pine/neovim",
+  --   name = "rose-pine",
+  --   styles = {
+  --     transparency = true,
+  --   },
+  -- },
+
   {
-    "miikanissi/modus-themes.nvim",
-    name = "modus",
+    "folke/tokyonight.nvim",
+    lazy = false,
     priority = 1000,
+    opts = {},
   },
 
   {
-    "dgox16/oldworld.nvim",
-    lazy = false,
-    priority = 1000,
-  },
-
-  {
-    "rebelot/kanagawa.nvim",
-    lazy = false,
+    "catppuccin/nvim",
+    name = "catppuccin",
     priority = 1000,
     opts = {
-      theme = "dragon",
-    },
-  },
-
-  -- lua/plugins/rose-pine.lua
-  {
-    "rose-pine/neovim",
-    name = "rose-pine",
-    styles = {
-      transparency = true,
+      theme = "macchiato",
     },
   },
 
@@ -79,7 +95,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "rose-pine",
+      colorscheme = "tokyonight-storm",
     },
   },
 }

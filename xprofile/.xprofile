@@ -9,7 +9,7 @@ pgrep -x picom >/dev/null || picom &
 pgrep -x unclutter >/dev/null || unclutter --jitter 10 --ignore-scrolling --start-hidden --fork &
 
 # Fondo de pantalla
-WALLPAPER="$HOME/Downloads/clouds_above_a_mountain.png"
+WALLPAPER="$HOME/Downloads/landscape2.jpg"
 if [ -f "$WALLPAPER" ]; then
   feh --bg-fill "$WALLPAPER"
 else
