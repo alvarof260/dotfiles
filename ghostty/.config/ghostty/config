@@ -29,6 +29,7 @@ font-family = JetBrainsMono Nerd Font Mono
 gtk-titlebar = false
 font-size = 10.5
 
+theme = TokyoNight Storm
 
 background-opacity = 0.85
 # window-padding-x = 2

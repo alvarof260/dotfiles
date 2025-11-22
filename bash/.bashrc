@@ -14,6 +14,7 @@ eval "$(zoxide init bash)"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 set -o vi
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
