@@ -1,2 +1,3 @@
--- bootstrap lazy.nvim, LazyVim and your plugins
-require("config.lazy")
+require("estanislao.core")
+require("estanislao.lazy")
+require("estanislao.lsp")
