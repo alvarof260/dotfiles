@@ -35,7 +35,7 @@ opt.showmode = false
 opt.scrolloff = 8
 opt.signcolumn = "yes"
 opt.termguicolors = true
-opt.cursorline = true
+-- opt.cursorline = true
 opt.background = "dark"
 
 -- window splits

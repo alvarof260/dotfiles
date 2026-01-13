@@ -4,6 +4,8 @@ return {
     config = function()
         local lualine = require("lualine")
 
-        lualine.setup({})
-    end
+        lualine.setup({
+            icons_enabled = true,
+        })
+    end,
 }
