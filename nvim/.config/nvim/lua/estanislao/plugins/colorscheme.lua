@@ -32,7 +32,7 @@ return {
                 styles = {
                     italic = false,
                     bold = true,
-                    transparency = false -- TODO: add transparency 
+                    transparency = false -- TODO: add transparency
                 },
                 highlight_groups = {
                     ColorColumn = { bg = "#1C1C21" },

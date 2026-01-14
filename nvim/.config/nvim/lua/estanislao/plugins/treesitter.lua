@@ -24,6 +24,7 @@ return {
                 "bash",
                 "go",
                 "jsdoc",
+                "regex",
             },
             auto_install = false,
             highlight = {

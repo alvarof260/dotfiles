@@ -21,7 +21,7 @@ return {
                     preset = "telescope",
                     cycle = false,
                 },
-                -- TODO: edit UI PICKER
+                --TODO: edit UI PICKER
             },
             input = {
                 enabled = true,
@@ -87,7 +87,8 @@ return {
     {
         "folke/todo-comments.nvim",
         event = { "BufReadPre", "BufNewFile" },
-        optional = true,
+        dependencies = { "nvim-lua/plenary.nvim" },
+        opts = {},
         keys = {
             { "<leader>pt", function() require("snacks").picker.todo_comments() end, desc = "Todo" },
             { "<leader>pT", function () require("snacks").picker.todo_comments({ keywords = { "TODO", "FIX", "FIXME" } }) end, desc = "Todo/Fix/Fixme" },
