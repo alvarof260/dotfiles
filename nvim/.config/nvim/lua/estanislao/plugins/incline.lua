@@ -3,7 +3,9 @@ return {
     event = "BufReadPre",
     priority = 1200,
     enabled = true,
-    dependencies = { "nvim-mini/mini.icons" },
+    dependencies = {
+        "nvim-mini/mini.icons"
+    },
     config = function()
         local incline = require("incline")
 

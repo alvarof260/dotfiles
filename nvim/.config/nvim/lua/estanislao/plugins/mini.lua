@@ -1,6 +1,9 @@
 return {
     -- mini nvim
-    { "nvim-mini/mini.nvim", version = false },
+    {
+        "nvim-mini/mini.nvim",
+        version = false
+    },
 
     -- comments
     {
@@ -19,7 +22,9 @@ return {
                 -- tsx, jsx, html , svelte comment support
                 options = {
                     custom_commentstring = function()
-                        return require('ts_context_commentstring.internal').calculate_commentstring() or vim.bo.commentstring
+                        return require(
+                            'ts_context_commentstring.internal'
+                        ).calculate_commentstring() or vim.bo.commentstring
                     end,
                 },
             }
@@ -46,7 +51,12 @@ return {
                 only_in_normal_buffers = true,
             })
 
-            vim.keymap.set("n", "<leader>cw", function() mini_trailspace.trim() end, { desc = "Erase Whitespace" })
+            vim.keymap.set(
+                "n",
+                "<leader>cw",
+                function() mini_trailspace.trim() end,
+                { desc = "Erase Whitespace" }
+            )
 
             -- vim.api.nvim_create_autocmd("CursorMoved", {
             --     pattern = "*",
@@ -68,11 +78,4 @@ return {
             })
         end,
     }
-
-    -- WARN: change a ts-comments
-    -- {
-    --     "folke/ts-comments.nvim",
-    --     config = true,
-    --     event = "VeryLazy",
-    -- },
 }

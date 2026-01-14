@@ -1,6 +1,8 @@
 return {
     'stevearc/oil.nvim',
-    dependencies = { { "nvim-mini/mini.icons", opts = {} } },
+    dependencies = {
+        "nvim-mini/mini.icons",
+    },
     lazy = false,
     config = function()
         local oil = require("oil")
@@ -22,9 +24,19 @@ return {
         })
 
         -- opens parent dir over current active window
-        vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+        vim.keymap.set(
+            "n",
+            "-",
+            "<CMD>Oil<CR>",
+            { desc = "Open parent directory" }
+        )
         -- open parent dir in float window
-        vim.keymap.set("n", "<leader>-", require("oil").toggle_float, { desc ="Open parent directory float" })
+        vim.keymap.set(
+            "n",
+            "<leader>-",
+            require("oil").toggle_float,
+            { desc ="Open parent directory float" }
+        )
 
         vim.api.nvim_create_autocmd("FileType", {
             pattern = "oil",

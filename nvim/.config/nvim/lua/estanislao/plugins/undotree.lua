@@ -1,6 +1,11 @@
 return {
     "jiaoshijie/undotree",
     config = function()
-        vim.keymap.set("n", "<leader>u", require("undotree").toggle, { noremap = true, silent = true, desc = "Undotree" })
+        vim.keymap.set(
+            "n",
+            "<leader>u",
+            require("undotree").toggle,
+            { noremap = true, silent = true, desc = "Undotree" }
+        )
     end,
 }
