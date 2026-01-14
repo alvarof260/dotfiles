@@ -32,14 +32,7 @@ return {
             dashboard = {
                 enabled = true,
                 sections = {
- {
-                        section = "terminal",
-                        cmd = "ascii-image-converter ~/Downloads/dragon.jpg -b -n -c -d 20,20",
-                        random = 15,
-                        pane = 2,
-                        indent = 15,
-                        height = 20,
-                    },
+                    { section = "header" },
                     { icon = " ", title = "Keymaps", section = "keys", indent = 2, padding = 1 },
                     { icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = 1 },
                     { icon = " ", title = "Projects", section = "projects", indent = 2, padding = 1 },
