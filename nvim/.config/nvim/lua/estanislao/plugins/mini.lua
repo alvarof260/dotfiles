@@ -19,7 +19,7 @@ return {
                 -- tsx, jsx, html , svelte comment support
                 options = {
                     custom_commentstring = function()
-                        return require('ts_context_commentstring.internal').calculate_commentstring({ key = 'commentstring' }) or vim.bo.commentstring
+                        return require('ts_context_commentstring.internal').calculate_commentstring() or vim.bo.commentstring
                     end,
                 },
             }
@@ -47,6 +47,13 @@ return {
             })
 
             vim.keymap.set("n", "<leader>cw", function() mini_trailspace.trim() end, { desc = "Erase Whitespace" })
+
+            -- vim.api.nvim_create_autocmd("CursorMoved", {
+            --     pattern = "*",
+            --     callback = function()
+            --         require("mini.trailspace").unhighlight()
+            --     end,
+            -- })
         end,
     },
 
