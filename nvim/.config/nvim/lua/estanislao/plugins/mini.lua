@@ -77,5 +77,10 @@ return {
             mini_splitjoin.setup({
             })
         end,
+    },
+
+    {
+        "nvim-mini/mini.cmdline",
+        version = false,
     }
 }
