@@ -78,9 +78,4 @@ return {
             })
         end,
     },
-
-    {
-        "nvim-mini/mini.cmdline",
-        version = false,
-    }
 }
