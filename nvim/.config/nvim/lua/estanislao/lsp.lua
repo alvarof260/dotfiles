@@ -30,3 +30,20 @@ vim.api.nvim_create_autocmd("LspAttach", {
         map("n", "[d", function() vim.diagnostic.jump({ count = -1, float = true }) end, "Previous diagnostic")
     end
 })
+
+local signs = {
+    [vim.diagnostic.severity.ERROR] = " ",
+    [vim.diagnostic.severity.WARN] = " ",
+    [vim.diagnostic.severity.HINT] = "󰠠 ",
+    [vim.diagnostic.severity.INFO] = " ",
+}
+
+-- Set diagnostic config
+vim.diagnostic.config({
+    signs = {
+        text = signs,
+    },
+    virtual_text = true,
+    underline = true,
+    update_in_insert = false,
+})
