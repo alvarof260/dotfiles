@@ -24,8 +24,8 @@ vim.api.nvim_create_autocmd("LspAttach", {
         map("n", "<leader>cdb", function() Snacks.picker.diagnostics_buffer() end, "Show buffer diagnostics")
         map("n", "<leader>cdl",  vim.diagnostic.open_float, "Show line diagnostics")
         map("n", "<leader>ci",  ":LspInfo<CR>", "Lsp info")
-        map("n", "<leader>cl",  ":LspRestart<CR>", "Lsp restart")
-        map("n", "<C-h>", vim.lsp.buf.signature_help, "Signature help")
+        map("n", "<leader>cx",  ":LspRestart<CR>", "Lsp restart")
+        -- map("n", "<C-k>", vim.lsp.buf.signature_help, "Signature help")
         map("n", "]d", function() vim.diagnostic.jump({ count = 1, float = true }) end, "Next diagnostic")
         map("n", "[d", function() vim.diagnostic.jump({ count = -1, float = true }) end, "Previous diagnostic")
     end
