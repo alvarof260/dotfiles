@@ -8,6 +8,9 @@ return {
 
 		lualine.setup({
 			icons_enabled = true,
+			options = {
+				globalstatus = true,
+			},
 		})
 	end,
 }
