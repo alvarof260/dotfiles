@@ -1,55 +1,38 @@
-# This is the configuration file for Ghostty.
-#
-# This template file has been automatically created at the following
-# path since Ghostty couldn't find any existing config files on your system:
-#
-#   /home/estanislao_dev/.config/ghostty/config
-#
-# The template does not set any default options, since Ghostty ships
-# with sensible defaults for all options. Users should only need to set
-# options that they want to change from the default.
-#
-# Run `ghostty +show-config --default --docs` to view a list of
-# all available config options and their default values.
-#
-# Additionally, each config option is also explained in detail
-# on Ghostty's website, at https://ghostty.org/docs/config.
-#
-# Ghostty can reload the configuration while running by using the menu
-# options or the bound key (default: Command + Shift + comma on macOS and
-# Control + Shift + comma on other platforms). Not all config options can be
-# reloaded while running; some only apply to new windows and others may require
-# a full restart to take effect.
+# Font
+font-family = "FiraCode Nerd Font"
+font-size = 11
 
-# Config syntax crash course
-# ==========================
-# # The config file consists of simple key-value pairs,
-# # separated by equals signs.
-font-family = JetBrainsMono Nerd Font Mono 
-gtk-titlebar = false
-font-size = 10.5
-
-theme = TokyoNight Storm
-
+# Window
 background-opacity = 0.85
-# window-padding-x = 2
-#
-# # Spacing around the equals sign does not matter.
-# # All of these are identical:
-# key=value
-# key= value
-# key =value
-# key = value
-#
-# # Any line beginning with a # is a comment. It's not possible to put
-# # a comment after a config option, since it would be interpreted as a
-# # part of the value. For example, this will have a value of "#123abc":
-# background = #123abc
-#
-# # Empty values are used to reset config keys to default.
-# key =
-#
-# # Some config options have unique syntaxes for their value,
-# # which is explained in the docs for that config option.
-# # Just for example:
-# resize-overlay-duration = 4s 200ms
+# FIX: fix background blur
+background-blur = true
+window-padding-color = extend
+window-padding-balance = true
+
+# Theme
+theme = Rose Pine
+
+# Keybinds
+# Splits
+keybind = alt+v=new_split:right
+keybind = alt+h=new_split:down
+
+# GoTo
+keybind = alt+h=goto_split:left
+keybind = alt+j=goto_split:down
+keybind = alt+k=goto_split:up
+keybind = alt+l=goto_split:right
+
+# Resize pane
+keybind = alt+ctrl+l=resize_split:right,10
+keybind = alt+ctrl+h=resize_split:left,10
+keybind = alt+ctrl+j=resize_split:down,10
+keybind = alt+ctrl+k=resize_split:up,10
+keybind = alt+ctrl+e=equalize_splits
+keybind = alt+ctrl+m=toggle_split_zoom
+
+# Move
+keybind = alt+g=scroll_to_top
+keybind = alt+shift+g=scroll_to_bottom
+
+keybind = alt+q=close_surface
