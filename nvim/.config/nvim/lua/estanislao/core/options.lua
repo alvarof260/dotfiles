@@ -47,5 +47,6 @@ opt.updatetime = 50
 opt.clipboard:append("unnamedplus")
 opt.colorcolumn = "80"
 opt.guicursor = ""
-opt.backspace = {"start", "eol", "indent"}
+opt.backspace = { "start", "eol", "indent" }
 opt.isfname:append("@-@")
+opt.mouse = ""
