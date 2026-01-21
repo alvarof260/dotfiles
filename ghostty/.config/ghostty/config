@@ -12,6 +12,10 @@ window-padding-balance = true
 # Theme
 theme = Rose Pine
 
+# Cursor
+cursor-style = block
+cursor-style-blink = true
+
 # Keybinds
 # Splits
 keybind = alt+v=new_split:right
