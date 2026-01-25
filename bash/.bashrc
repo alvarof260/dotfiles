@@ -7,7 +7,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
@@ -37,5 +36,12 @@ export NVM_DIR="$HOME/.nvm"
 
 # opencode
 export PATH=/home/estanislao_figueroa/.opencode/bin:$PATH
+
+# alias
+alias lg='lazygit'
+alias c='clear'
+alias e='exit'
+# Next level of an ls ,Options:  --no-filesize --no-time --no-permissions
+alias ls="eza --no-filesize --long --color=always --icons=always --no-user"
 
 [[ ! ${BLE_VERSION-} ]] || ble-attach
