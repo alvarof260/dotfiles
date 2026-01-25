@@ -36,7 +36,15 @@ return {
 		config = function()
 			local colorizer = require("colorizer")
 
-			colorizer.setup({})
+			colorizer.setup()
+		end,
+	},
+	{
+		"vimpostor/vim-tpipeline",
+		config = function()
+			vim.g.tpipeline_autoembed = 1
+			vim.g.tpipeline_restore = 0
+			vim.g.tpipeline_clearstl = 1
 		end,
 	},
 }
