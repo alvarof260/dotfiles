@@ -15,6 +15,8 @@ PS1='[\u@\h \W]\$ '
 set -o vi
 
 eval "$(zoxide init bash)"
+eval "$(atuin init bash)"
+eval "$(fzf --bash)"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

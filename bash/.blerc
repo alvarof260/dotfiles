@@ -1,6 +1,6 @@
 bleopt default_keymap=vi
 
-bleopt keymap_vi_mode_show=
+bleopt keymap_vi_mode_show=""
 
 ble-import vim-surround
 
