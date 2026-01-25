@@ -43,5 +43,6 @@ alias c='clear'
 alias e='exit'
 # Next level of an ls ,Options:  --no-filesize --no-time --no-permissions
 alias ls="eza --no-filesize --long --color=always --icons=always --no-user"
+alias fman="compgen -c | fzf | xargs man"
 
 [[ ! ${BLE_VERSION-} ]] || ble-attach
