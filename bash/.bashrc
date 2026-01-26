@@ -15,6 +15,7 @@ set -o vi
 
 eval "$(zoxide init bash)"
 eval "$(atuin init bash)"
+eval "$(starship init bash)"
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --bash)"
 export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --exclude .git'
