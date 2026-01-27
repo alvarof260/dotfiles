@@ -15,6 +15,7 @@ return {
 			})
 		end,
 	},
+	--FIX: no funciona el autocompletado de tags
 	{
 		"windwp/nvim-ts-autotag",
 		event = "InsertEnter",
